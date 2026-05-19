@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>    
+
+ /* Selector Universal: Eliminem el marge i l’emplenament de tots els HTML */
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+/* Apliquem a l'encapçalament h2 h3 color*/
+
+    h2,h3 { color: olive}
+
+    
+
+    /* Seleccionem a totes les classes c1 color */
+
+    .c1{ color: navy}
+
+    
+
+    /* Seleccionem tots els elements <p> amb id1 */
+
+p#id1 {color: pink}
+
+    
+
+    /* Seleccionem tots els elements <span> dintre de  <p> */
+
+    p span {color: purple}
+
+ 
+
+    /* Seleccionem tots els elements de classe c2 dintre d'un element de classe c3*/
+
+  .c3 .c2{color: aqua}
+
+   
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+  <h1>TÍtol H1</h1>
+
+  <h2>TÍtol H2</h2>
+
+  <h3>TÍtol H3</h3>
+
+  <p class="c1">Text amb  class c1</p>
+
+  <p id="id1">Text amb id1</p> 
+
+  <p>
+
+     <span>text dintre de span i p</span>
+
+ </p>
+
+
+
+
+ <div class="c3">
+
+    <p class="c2">text amb classe c2 dintre de c1 </p>
+
+ </div>    
+
+</body>
+
+
+
+
+</html>
