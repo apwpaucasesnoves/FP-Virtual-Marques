@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coding2go tutorial</title>
+  <script src="/js/script.js" defer></script>
+</head>
+<body>
+  <button id="my-button">Counter</button>
+  <div id="counter-display">0</div>
+</body>
+</html>
+
+
+
+
+
+const button = document.getElementById('my-button');
+const counterDisplay = document.getElementById('counter-display');
+let cookieCounter = 0;
+button.addEventListener('click', increaseCounter);
+function increaseCounter() {
+  cookieCounter++;
+  counterDisplay.textContent = cookieCounter; // también valdría .innerText
+}
+
+CODIS DARKMODE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tutorial Event Listeners</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/script.js" defer></script>
+</head>
+<body>
+  <button id="my-button">Tema obscur</button>
+</body>
+</html>
