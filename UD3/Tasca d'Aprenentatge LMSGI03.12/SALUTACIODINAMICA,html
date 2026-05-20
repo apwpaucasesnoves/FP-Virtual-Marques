@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="ca">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Salutació dinàmica</title>
+
+    <script src="/js/script.js" defer></script>
+
+</head>
+
+<body>
+
+  <main>
+
+    <h1 id="heading">Hello, how are you?</h1>
+
+    <input id="username-input" type="text" placeholder="Escriu el teu nom">
+
+  </main>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+const heading = document.getElementById('heading') //crea constant hheading que apunta al heading
+
+const username_input = document.getElementById('username-input') //crea constant username_input, que aputna al input.
+
+username_input.addEventListener("input", function(e) {//si canvia l'input
+
+  heading.innerText = "Hello " + e.target.value + ", how are you?"// es canvia el heading
+
+})
