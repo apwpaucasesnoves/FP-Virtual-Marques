@@ -1,0 +1,14 @@
+
+/* Tema clar per defecte */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s; /* Suavitat en el canvi */
+}
+
+
+/* Tema fosc */
+body.darkmode {
+  background-color: #121212;
+  color: white;
+}
