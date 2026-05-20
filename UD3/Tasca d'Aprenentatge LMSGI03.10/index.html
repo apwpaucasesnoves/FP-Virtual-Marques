@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>Formulari HTML</h1>
+
+<form action="mailto:correu@servidor.com" method="post" name="fproves" id="fproves" onsubmit="return validar()">
+
+
+
+
+  Nom: <input type="text" id="nom" name="nom"><br>
+
+  Llinatge: <input type="text" id="llinatge" name="llinatge"><br>
+
+  Edat <input type="text" id="edat" name="edat"><br>
+
+  DNI <input type="text" id="dni" name="dni"><br>
+
+  Correu electrònic <input type="text" id="mail" name="mail"><br>  
+
+   
+
+  <p>Sexe:</p>
+
+  <input type="radio" id="masculi" name="sexe" value="M">Masculí<br>
+
+  <input type="radio" id="femeni" name="sexe" value="F">Femeni<br>
+
+  <input type="radio" id="no" name="sexe" value="N">No vol respondre<br>
+
+  <p>Idiomes que domines (marca tots els necessaris):</p>
+
+  <input type="checkbox" id="ca" name="ca" value="ca">Català<br>
+
+  <input type="checkbox" id="es" name="es" value="es">Castellà<br>
+
+  <input type="checkbox" id="en" name="en" value="en">Anglès<br>
+
+  <input type="checkbox" id="de" name="de" value="de">Alemany<br>
+
+  <input type="checkbox" id="fr" name="fr" value="fr">Francès<br>
+
+ 
+
+  <br>
+
+<textarea id="comentaris" name="comentaris" rows="4" cols="50">
+
+Introdueix aquí els teus comentaris.
+
+</textarea>
+
+<br>
+
+Estudis: 
+
+<select id="estudis">
+
+  <option value="c">Cap</option>
+
+  <option value="e">ESO</option>
+
+  <option value="b">Batxillerat</option>
+
+  <option value="m">CFGM</option>
+
+  <option value="s">CFGS</option>
+
+  <option value="u">Grau universitari</option>
+
+  <option value="p">Postgrau universitari</option>
+
+  <option value="d">Doctorat</option>
+
+</select>
+
+    
+
+    
+
+    
+
+    
+
+ <br>
+
+  <input type="submit" value="Enviar">
+
+  <input type="reset" value="Reiniciar">
+
+
+
+
+</form> 
+
+   
+
+ <script>
+
+  function validar()
+
+    {  //Comprovem mida del nom entre 5 i 30
+
+        var nom = document.forms["fproves"]["nom"].value;
+
+        if (nom.length < 5)
+
+        {
+
+          alert("El teu nom és massa curt.");
+
+          return false;
+
+        } else {
+
+          if (nom.length > 30)
+
+          {
+
+            alert("El teu nom és massa llarg.");
+
+            return false;
+
+          }
+
+        }
+
+
+
+
+        
+
+//Comprovem que edat sigui un numero, substitum les comes per punts, i que no estigui buida 
+
+
+
+
+ 
+
+        var edat = document.forms["fproves"]["edat"].value;
+
+        //comprovam que no estigui buida:
+
+        if (edat == null || edat.length == 0) {
+
+         alert("Heu d'introduir la vostra edat");
+
+            return false;
+
+     } else {
+
+          //substituïm , per .
+
+          edat = edat.replace(",",".");
+
+
+
+
+          //comprovam que és un número
+
+          if( isNaN(edat)) { 
+
+              alert("L'edat ha de ser un número");
+
+              return false;
+
+          }
+
+        }
+
+
+
+
+//Comprovem que com a mínim tingui estudis d'ESO
+
+ 
+
+        var index = document.forms["fproves"]["estudis"].selectedIndex;
+
+        if (index==0) {
+
+         alert("Heu de tenir com a mínim estudis d’ESO");
+
+            return false;
+
+     } 
+
+//Comprovem que el correu tingui format correcte
+
+        
+
+      var mail = document.forms["fproves"]["mail"].value;
+
+        var expressio = /\S+@\S+\.\S+/;
+
+        var correcte = expressio.test(mail);
+
+        if (!correcte) {
+
+         alert("L'adreça electrònica no és correcta");
+
+            return false;
+
+     } 
+
+        
+
+        
+
+        return true;
+
+   }
+
+</script>
+
+   
+
+    
+
+
+
+
+</body>
+
+</html>
