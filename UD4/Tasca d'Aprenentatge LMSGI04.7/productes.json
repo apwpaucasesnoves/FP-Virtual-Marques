@@ -1,0 +1,71 @@
+{
+
+  "productes": [
+
+    {
+
+      "id_producte": "101",
+
+      "num_serie": "SN-12345",
+
+      "nom_producte": "SuperAparell",
+
+      "categoria": "Electrònica",
+
+      "fabricant": "AparellsSA",
+
+      "data_fabricacio": "2022-01-15",
+
+      "data_caducitat": "2025-01-15"
+
+    },
+
+    {
+
+      "id_producte": "102",
+
+      "id_empresa": "EMP-7890",
+
+      "nom_marca": "EinesPotents",
+
+      "categoria": "Eines",
+
+      "data_lanzament": "2020-06-30",
+
+      "distribuidors": [
+
+        {
+
+          "id_distribuidor": "D-01",
+
+          "nom": "Subministraments Nord",
+
+          "pais": "Espanya",
+
+          "data_inici": "2020-06-30",
+
+          "data_final": null
+
+        },
+
+        {
+
+          "id_distribuidor": "D-02",
+
+          "nom": "Distribucions Catalunya",
+
+          "pais": "França",
+
+          "data_inici": "2021-01-10",
+
+          "data_final": "2023-12-31"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
