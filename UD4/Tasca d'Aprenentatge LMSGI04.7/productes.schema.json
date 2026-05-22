@@ -1,0 +1,117 @@
+{
+
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "title": "Esquema de Producte",
+
+  "type": "object",
+
+  "properties": {
+
+    "productes": {
+
+      "type": "array",
+
+      "items": {
+
+        "anyOf": [
+
+          {
+
+            "type": "object",
+
+            "title": "Producte Individual",
+
+            "required": ["id_producte", "num_serie", "nom_producte", "categoria"],
+
+            "properties": {
+
+              "id_producte": { "type": "string" },
+
+              "num_serie": { "type": "string" },
+
+              "nom_producte": { "type": "string" },
+
+              "categoria": { "type": "string" },
+
+              "fabricant": { "type": "string" },
+
+              "data_fabricacio": { "type": "string", "format": "date" },
+
+              "data_caducitat": { "type": ["string", "null"], "format": "date" }
+
+            },
+
+            "additionalProperties": false
+
+          },
+
+          {
+
+            "type": "object",
+
+            "title": "Producte Empresarial",
+
+            "required": ["id_producte", "id_empresa", "nom_marca", "categoria", "distribuidors"],
+
+            "properties": {
+
+              "id_producte": { "type": "string" },
+
+              "id_empresa": { "type": "string" },
+
+              "nom_marca": { "type": "string" },
+
+              "categoria": { "type": "string" },
+
+              "data_lanzament": { "type": "string", "format": "date" },
+
+              "distribuidors": {
+
+                "type": "array",
+
+                "items": {
+
+                  "type": "object",
+
+                  "required": ["id_distribuidor", "nom", "pais"],
+
+                  "properties": {
+
+                    "id_distribuidor": { "type": "string" },
+
+                    "nom": { "type": "string" },
+
+                    "pais": { "type": "string", "enum": ["Espanya", "França", "Portugal"] },
+
+                    "data_inici": { "type": "string", "format": "date" },
+
+                    "data_final": { "type": ["string", "null"], "format": "date" }
+
+                  },
+
+                  "additionalProperties": false
+
+                }
+
+              }
+
+            },
+
+            "additionalProperties": false
+
+          }
+
+        ]
+
+      }
+
+    }
+
+  },
+
+  "additionalProperties": false
+
+  }
+
+
