@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+
+
+
+<!--definim l’element principal biblioteca-->
+
+  <xs:element name="biblioteca"> 
+
+    <xs:complexType><!--tipus complex, si no no podria tenir elements fills o atributs-->
+
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><!--numero maxim i minim d’ocurrencia de la biblioteca, minim 0 maxim infinit, equival a * en DTD-->
+
+        <xs:element ref="llibre"/><!--la sequencia estara formada per elements de tipus llibre-->
+
+      </xs:sequence>
+
+    </xs:complexType>
+
+  </xs:element>
+
+
+
+
+  <!--definim llibre, com que l'hem definit com un complex type s'han de definir expecificament, els simples no-->
+
+  <xs:element name="llibre"> 
+
+    <xs:complexType><!--tipus complex, si no no podria tenir elements fills o atributs-->
+
+      <xs:sequence><!--sequencia, han d'estar tots les elements en aquest ordre-->
+
+        <xs:element ref="títol"/>
+
+        <xs:element ref="idioma"/>
+
+        <xs:element ref="gènere"/>
+
+  <!--diem que es possible que les ocurrencies mínimes de descatalogat siguin 0, no existeixi. equival a ? en DTD-->
+
+        <xs:sequence minOccurs="0"> 
+
+          <xs:element ref="descatalogat"/>
+
+        </xs:sequence>
+
+        <xs:element ref="autor"/>
+
+     <!--diem que es possible que les ocurrencies mínimes de web siguin 0, no existeixi.equival a ? en DTD-->
+
+        <xs:sequence minOccurs="0">
+
+          <xs:element ref="web"/>
+
+        </xs:sequence>
+
+      </xs:sequence>
+
+
+
+
+  <!--Atributs de llibre-->
+
+      <xs:attribute name="codi" type="xs:ID" use="required"/><!--llibre té un atribut codi, de tipus ID i obligatori-->
+
+      <xs:attribute name="any" type="xs:string" default="2021"/><!--llibre té un atributt any, de tipus string i amb valor per defecte 2021-->
+
+
+
+
+    </xs:complexType>
+
+  </xs:element>
+
+
+
+
+
+
+
+<!--definim els elements dintre de llibre, que són tipus text. -->
+
+  <xs:element name="títol" type="xs:string"/>  
+
+  <xs:element name="idioma" type="xs:string"/>  
+
+  <xs:element name="gènere" type="xs:string"/>  
+
+  <xs:element name="descatalogat" type="xs:string"/>  
+
+  <xs:element name="autor" type="xs:string"/>
+
+  <xs:element name="web" type="xs:string"/>
+
+
+
+
+
+
+
+</xs:schema>
+
+
