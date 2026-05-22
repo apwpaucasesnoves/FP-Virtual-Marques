@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="llibres.xsd">  <!--Indiquem on es troba l’esquema de biblioteca-->
+
+
+
+
+  <llibre codi="L1" any="1912"> 
+
+      <títol>Campos de Castilla</títol> 
+
+      <idioma>castellà</idioma> 
+
+      <gènere>poesia</gènere> 
+
+      <autor>Antonio Machado</autor> 
+
+      <web>https://www.campos-de-castilla_978-84-376-0866-2</web> 
+
+  </llibre>
+
+  <llibre codi="L2"> 
+
+      <títol>Under the frog</títol>
+
+      <idioma>anglès</idioma> 
+
+      <gènere>drama</gènere> 
+
+      <descatalogat/> 
+
+      <autor>Tibor Fischer</autor>
+
+  </llibre> 
+
+
+
+
+</biblioteca> 
