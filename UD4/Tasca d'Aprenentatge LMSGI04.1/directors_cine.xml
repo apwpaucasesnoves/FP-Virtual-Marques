@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE directors_cine [
+
+ <!ELEMENT directors_cine (director*)>
+
+ <!ELEMENT director ((nom | llinatge), data_naixement)>
+
+ <!ELEMENT nom (#PCDATA)>
+
+ <!ELEMENT llinatge (#PCDATA)>
+
+ <!ELEMENT data_naixement (#PCDATA)>
+
+]>
+
+
+
+
+<directors_cine>
+
+ <director>
+
+   <nom>Stanley</nom>
+
+   <llinatge>Kubrick</llinatge>
+
+   <data_naixement>26 de juliol de 1928 </data_naixement>
+
+ </director>
+
+ <director>
+
+   <nom>Francis</nombre>
+
+   <llinatge>Ford Coppola</llinatge>
+
+   <data_naixement>7 d'abril de 1939</data_naixement>
+
+ </director>
+
+</directors_cine>
+
+<director>
+
+   <nom>Federico</nombre>
+
+   <llinatge>Fellini</llinatge>
+
+   <data_naixement>20 de gener del 1920 </data_naixement>
+
+ </director>
+
+</directors_cine>
